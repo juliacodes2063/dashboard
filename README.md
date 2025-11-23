@@ -18,10 +18,3 @@ npm run dev
 
 Далі відкрийте http://localhost:3000 у браузері.
 
-Доступні скрипти
-npm run dev – запуск у режимі розробки
-npm run build – production-збірка
-npm start – запуск зібраного застосунку
-npm run lint – запуск ESLint
-
-::contentReference[oaicite:0]{index=0}
