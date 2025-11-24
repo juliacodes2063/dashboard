@@ -19,11 +19,13 @@ export const useInventoryCoverageOption = (
 
   let black = '#071429';
   let primary = '#0e64ee';
+  let isMobile = false;
 
   if (typeof window !== 'undefined') {
     const root = getComputedStyle(document.documentElement);
     black = root.getPropertyValue('--color-commonBlack').trim() || black;
     primary = root.getPropertyValue('--color-primaryBlue').trim() || primary;
+    isMobile = window.innerWidth < 768;
   }
 
   return useMemo(() => {
@@ -39,7 +41,9 @@ export const useInventoryCoverageOption = (
       },
       title: {
         text: 'Inventory Coverage (90 days)',
-        subtext: 'Optimized inventory projections with upcoming POs',
+        subtext: isMobile
+          ? ''
+          : 'Optimized inventory projections with upcoming POs',
         left: 0,
         top: 0,
         textStyle: {
@@ -55,6 +59,7 @@ export const useInventoryCoverageOption = (
         itemGap: 8,
       },
       legend: {
+        show: !isMobile,
         top: 0,
         right: 0,
         itemWidth: 18,
@@ -70,7 +75,7 @@ export const useInventoryCoverageOption = (
       tooltip: {
         trigger: 'axis',
         className: 'inventory-tooltip',
-        borderWidth: 0, 
+        borderWidth: 0,
         extraCssText:
           'box-shadow:0 18px 45px rgba(15,23,42,0.18);border-radius:16px;padding:12px 16px;',
         axisPointer: {
@@ -182,5 +187,5 @@ export const useInventoryCoverageOption = (
         },
       ],
     };
-  }, [data, openSans, fixelDisplay, black, primary]);
+  }, [data, openSans, fixelDisplay, black, primary, isMobile]);
 };

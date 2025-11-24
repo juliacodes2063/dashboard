@@ -38,7 +38,7 @@ body {
 
 @layer components {
   .heading-hero {
-    @apply font-display text-[36px] font-semibold text-foreground;
+    @apply font-display text-[28px] md:text-[36px] font-semibold text-foreground;
   }
 
   .heading-card-lg {
@@ -55,11 +55,11 @@ body {
 
 
   .text-body-md {
-    @apply font-sans text-[14px] font-normal leading-[120%] text-foreground/50;
+    @apply font-sans text-[12px] md:text-[14px] font-normal leading-[120%] text-foreground/50;
   }
 
   .text-body-sm {
-    @apply font-sans text-[12px] font-normal leading-[120%] text-foreground/50;
+    @apply font-sans text-[10px] md:text-[12px] font-normal leading-[120%] text-foreground/50;
   }
 }
 

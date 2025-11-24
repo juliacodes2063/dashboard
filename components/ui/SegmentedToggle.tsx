@@ -48,7 +48,7 @@ const SegmentedToggle: React.FC<SegmentedToggleProps> = ({
             type="button"
             onClick={() => handleClick(option.id)}
             className={cn(
-              'px-[20px] h-[40px] text-[10px] md:text-[12px] rounded-full transition font-display lg:text-[15px]',
+              'cursor-pointer px-[20px] h-[40px] text-[10px] md:text-[12px] rounded-full transition font-display lg:text-[15px]',
               isActive
                 ? 'bg-primaryBlue text-white m'
                 : 'text-primaryBlue hover:bg-slate-100',
