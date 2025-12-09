@@ -6,7 +6,7 @@ import { useInventoryHoverLine } from "./hooks/useInventoryHoverLine";
 import Card from "@/components/ui/Card";
 import SkeletonBlock from "@/components/ui/SkeletonBlock";
 
-import './InventoryTooltip.scss'
+import './InventoryTooltip.css'
 
 const ReactECharts = dynamic(() => import('echarts-for-react'), {
   ssr: false,

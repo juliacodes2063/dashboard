@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import './mixins/dynamic';
 
 :root {
   --background: #e7edf8;
@@ -11,6 +10,24 @@
 
   --index: calc(1vw + 1vh);
   --index-ratio: 24.96;
+
+  --dyn-4: calc(var(--index) * 4 / var(--index-ratio));
+  --dyn-5: calc(var(--index) * 5  / var(--index-ratio));
+  --dyn-8: calc(var(--index) * 8 / var(--index-ratio));
+  --dyn-10: calc(var(--index) * 10 / var(--index-ratio));
+  --dyn-12: calc(var(--index) * 12 / var(--index-ratio));
+  --dyn-14: calc(var(--index) * 14 / var(--index-ratio));
+  --dyn-15: calc(var(--index) * 15 / var(--index-ratio));
+  --dyn-16: calc(var(--index) * 16 / var(--index-ratio));
+  --dyn-18: calc(var(--index) * 18 / var(--index-ratio));
+  --dyn-20: calc(var(--index) * 20 / var(--index-ratio));
+  --dyn-24: calc(var(--index) * 24 / var(--index-ratio));
+  --dyn-34: calc(var(--index) * 34 / var(--index-ratio));
+  --dyn-40: calc(var(--index) * 40 / var(--index-ratio));
+  --dyn-129: calc(var(--index) * 129 / var(--index-ratio));
+  --dyn-176: calc(var(--index) * 176 / var(--index-ratio));
+  --dyn-180: calc(var(--index) * 180 / var(--index-ratio));
+  --dyn-440: calc(var(--index) * 440 / var(--index-ratio));
 }
 
 .dark {
@@ -51,111 +68,111 @@ body {
   .heading-hero {
     @apply font-display leading-[115%] font-semibold text-foreground;
 
-    @include dyn-size(font-size, 36);
+    font-size: var(--dyn-36);
   }
 
   .heading-card-lg {
     @apply font-display leading-[115%] font-semibold text-foreground;
 
-    @include dyn-size(font-size, 24);
+    font-size: var(--dyn-24);
   }
 
   .heading-card-md {
     @apply font-display leading-[115%] font-semibold text-foreground;
 
-    @include dyn-size(font-size, 18);
+    font-size: var(--dyn-18);
   }
 
   .heading-label {
     @apply font-sans font-normal leading-[120%] text-foreground;
 
-    @include dyn-size(font-size, 14);
+    font-size: var(--dyn-14);
   }
 
   .text-body-md {
     @apply font-sans font-normal leading-[120%] text-foreground/50;
 
-    @include dyn-size(font-size, 14);
+    font-size: var(--dyn-14);
   }
 
   .text-body-sm {
     @apply font-sans font-normal leading-[120%] text-foreground/50;
 
-    @include dyn-size(font-size, 12);
+    font-size: var(--dyn-12);
   }
 
   .text-button {
     @apply font-display font-normal leading-[120%];
 
-    @include dyn-size(font-size, 15);
+    font-size: var(--dyn-15);
   }
 
   .card-dynamic-info {
-    @include dyn-size(padding, 18);
-    @include dyn-size(height, 176);
-    @include dyn-size(border-radius, 12);
+    padding: var(--dyn-18);
+    height: var(--dyn-176);
+    border-radius: var(--dyn-12);
   }
 
   .card-dynamic-stat {
-    @include dyn-size(padding, 18);
-    @include dyn-size(height, 180);
-    @include dyn-size(border-radius, 20);
+    padding: var(--dyn-18);
+    height: var(--dyn-180);
+    border-radius: var(--dyn-20);
   }
 
   .card-title-dis {
-    @include dyn-size(gap, 4);
+    gap: var(--dyn-4);
   }
 
   .dynamic-dis-grid {
-    @include dyn-size(gap, 8);
+    gap: var(--dyn-8);
   }
 
   .dynamic-button-h {
-    @include dyn-size(height, 40);
+    height: var(--dyn-40);
   }
 
   .dynamic-dis-title-m {
-    @include dyn-size(margin-bottom, 34);
+    margin-bottom: var(--dyn-34);
   }
 
   .dynamic-dis-sidebar {
-    @include dyn-size(gap, 129);
+    gap: var(--dyn-129);
   }
 
   .card-info-title-dis-gen {
-    @include dyn-size(gap, 8);
+    gap: var(--dyn-8);
   }
 
   .card-info-title-dis {
-    @include dyn-size(gap, 10);
+    gap: var(--dyn-10);
   }
 
   .card-info-gen {
-    @include dyn-size(padding, 14);
-    @include dyn-size(padding-top, 20);
-    @include dyn-size(border-radius, 24);
+    padding: var(--dyn-14);
+    padding-top: var(--dyn-20);
+    border-radius: var(--dyn-24);
   }
 
   .card-info-gen-gap {
-    @include dyn-size(gap, 12);
+    gap: var(--dyn-12);
   }
 
   .cart-info-title-m {
-    @include dyn-size(margin-bottom, 10);
+    margin-bottom: var(--dyn-10);
   }
 
   .cart-chart {
-    @include dyn-size(padding-top, 16);
-    @include dyn-size(padding-bottom, 16);
-    @include dyn-size(padding-left, 14);
-    @include dyn-size(padding-right, 14);
+    padding-top: var(--dyn-16);
+    padding-bottom: var(--dyn-16);
+    padding-left: var(--dyn-14);
+    padding-right: var(--dyn-14);
 
-    @include dyn-size(border-radius, 16);
+    border-radius: var(--dyn-16);
   }
 
   @media (min-width: 1280px) {
     .grid-main {
-      @include dyn-size(--info-col-width, 440);
+      --info-col-width: var(--dyn-440);
 
       grid-template-columns:
         minmax(0, 1fr)

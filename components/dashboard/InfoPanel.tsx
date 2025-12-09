@@ -70,7 +70,7 @@ const InfoPanel: React.FC = () => {
               className={cn(
                 'flex flex-col justify-between',
                 i === 0
-                  ? 'bg-items/0 cart-info-title-m px-[6px]'
+                  ? 'bg-items/0 cart-info-title-m px-1.5'
                   : 'bg-items/80 min-h-[100px] card-dynamic-info',
               )}
             >

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { openSans, fixelDisplay } from './fonts';
-import './styles/globals.scss';
+import './globals.css';
 import Sidebar from '@/components/layout/Sidebar';
 import Header from '@/components/layout/Header';
 

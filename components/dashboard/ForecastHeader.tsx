@@ -4,7 +4,7 @@ import { EyeIcon } from '@/components/icons';
 
 const ForecastHeader: React.FC = () => {
   return (
-    <div className="flex flex-col items-center gap-5 lg:gap-0 lg:flex-row lg:justify-between dynamic-dis-title-m">
+    <div className="flex flex-col items-center gap-5 lg:gap-0 lg:flex-row lg:justify-between dynamic-dis-title-m h-">
       <div className="flex flex-col dynamic-dis-grid">
         <h1 className="heading-hero">Location-Based Forecasting</h1>
         <p className="text-body-md">
@@ -20,7 +20,7 @@ const ForecastHeader: React.FC = () => {
             label: (
               <span className="flex items-center gap-[8px]">
                 <EyeIcon className="h-4 w-4" />
-                <span>View Forecast Accuracy</span>
+                <span className="text-">View Forecast Accuracy</span>
               </span>
             ),
           },

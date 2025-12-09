@@ -1,3 +1,0 @@
-@mixin dyn-size($prop, $base) {
-  #{$prop}: calc(var(--index) * #{$base} / var(--index-ratio));
-}
