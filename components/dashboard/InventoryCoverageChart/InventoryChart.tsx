@@ -13,10 +13,10 @@ const ReactECharts = dynamic(() => import('echarts-for-react'), {
 });
 
 const InventorySkeleton: React.FC = () => (
-  <Card className="space-y-4 bg-items rounded-md">
+  <Card className="space-y-4 bg-items rounded-md h-[200px]">
     <SkeletonBlock className="h-4 w-64" />
     <SkeletonBlock className="h-3 w-80" />
-    <SkeletonBlock className="h-72 w-full rounded-2xl" />
+    <SkeletonBlock className="h-60 w-full rounded-2xl" />
   </Card>
 );
 
