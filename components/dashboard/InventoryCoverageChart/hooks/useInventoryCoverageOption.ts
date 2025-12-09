@@ -155,6 +155,7 @@ export const useInventoryCoverageOption = (
       xAxis: {
         type: 'time',
         boundaryGap: ['1%', '1%'],
+        splitNumber: isMobile ? 6 : 12,
         axisLine: { show: false },
         axisTick: { show: false },
         axisLabel: {
@@ -164,7 +165,6 @@ export const useInventoryCoverageOption = (
           },
           color: `${black}80`,
           fontSize: dyn(12),
-          hideOverlap: true,
         },
       },
 
