@@ -15,7 +15,7 @@ const ICONS = {
 const StatsCardsSkeleton: React.FC = () => (
   <div className="grid dynamic-dis-grid lg:grid-cols-3">
     {Array.from({ length: 3 }).map((_, i) => (
-      <Card key={i} className="space-y-3 bg-items card-dynamic-stat rounded-lg">
+      <Card key={i} className="space-y-3 bg-items card-dynamic-stat">
         <SkeletonBlock className="h-3 w-24" />
         <SkeletonBlock className="h-4 w-32" />
         <SkeletonBlock className="h-3 w-full" />
@@ -46,7 +46,7 @@ const StatsCardsSection: React.FC = () => {
         return (
           <Card
             key={card.id}
-            className="bg-items/50 flex flex-col justify-between rounded-lg min-h-[100px] card-dynamic-stat"
+            className="bg-items/50 flex flex-col justify-between min-h-[100px] card-dynamic-stat"
           >
             <div className="flex justify-between items-center">
               <div className="flex flex-col card-title-dis">

@@ -93,11 +93,13 @@ body {
   .card-dynamic-info {
     @include dyn-size(padding, 18);
     @include dyn-size(height, 176);
+    @include dyn-size(border-radius, 12);
   }
 
   .card-dynamic-stat {
     @include dyn-size(padding, 18);
     @include dyn-size(height, 180);
+    @include dyn-size(border-radius, 20);
   }
 
   .card-title-dis {
@@ -147,6 +149,8 @@ body {
     @include dyn-size(padding-bottom, 16);
     @include dyn-size(padding-left, 14);
     @include dyn-size(padding-right, 14);
+
+    @include dyn-size(border-radius, 16);
   }
 
   @media (min-width: 1280px) {

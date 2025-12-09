@@ -7,7 +7,7 @@ import InventoryChart from './InventoryCoverageChart/InventoryChart';
 const InventoryCoverageSection: React.FC = () => {
 
   return (
-    <Card className="bg-items flex-1 cart-chart rounded-md">
+    <Card className="bg-items flex-1 cart-chart">
       <InventoryChart />
     </Card>
   );

@@ -32,7 +32,7 @@ const InfoSkeleton: React.FC = () => (
   <div className="space-y-4">
     <Card className="card-info-gen bg-items rounded-xl ">
       {Array.from({ length: 3 }).map((_, i) => (
-        <Card key={i} className="space-y-3 bg-items rounded-sm card-dynamic-info">
+        <Card key={i} className="space-y-3 bg-items card-dynamic-info">
           <SkeletonBlock className="h-3 w-40" />
           <SkeletonBlock className="h-3 w-full" />
           <SkeletonBlock className="h-3 w-3/4" />
@@ -70,8 +70,8 @@ const InfoPanel: React.FC = () => {
               className={cn(
                 'flex flex-col justify-between',
                 i === 0
-                  ? 'bg-items/0 rounded-none cart-info-title-m px-[6px]'
-                  : 'bg-items/80 rounded-sm min-h-[100px] card-dynamic-info',
+                  ? 'bg-items/0 cart-info-title-m px-[6px]'
+                  : 'bg-items/80 min-h-[100px] card-dynamic-info',
               )}
             >
               {Icon && (

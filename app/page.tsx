@@ -14,7 +14,7 @@ export default function Page() {
           <InventoryCoverageSection />
         </section>
 
-        <aside className="mt-4 min-w-0 space-y-4 xl:mt-0">
+        <aside className="min-w-0 space-y-4">
           <InfoPanel />
         </aside>
       </div>

@@ -13,7 +13,7 @@ const ReactECharts = dynamic(() => import('echarts-for-react'), {
 });
 
 const InventorySkeleton: React.FC = () => (
-  <Card className="space-y-4 bg-items rounded-md h-[200px] cart-chart">
+  <Card className="space-y-4 bg-items h-[200px] cart-chart">
     <SkeletonBlock className="h-4 w-64" />
     <SkeletonBlock className="h-3 w-80" />
     <SkeletonBlock className="h-[100px] xl:h-60 w-full rounded-2xl" />
