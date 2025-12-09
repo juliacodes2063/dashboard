@@ -57,7 +57,7 @@ const InfoPanel: React.FC = () => {
   if (!blocks) return <InfoSkeleton />;
 
   return (
-    <Card className="card-info-gen relative bg-items/50 flex flex-col overflow-hidden rounded-xl">
+    <Card className="card-info-gen relative bg-items/50 flex flex-col overflow-hidden">
       <div className="z-10 flex flex-col card-info-gen-gap">
         {blocks.map((block, i) => {
           const Icon = block.iconId ? ICONS[block.iconId] : null;

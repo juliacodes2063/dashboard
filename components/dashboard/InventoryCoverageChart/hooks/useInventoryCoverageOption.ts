@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect, useCallback } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { type EChartsOption } from 'echarts';
 import type { InventoryPoint } from '@/types/dashboard';
 import { chartIcons } from '../chartIcons';
@@ -27,6 +27,7 @@ export const useInventoryCoverageOption = (
 
   const [index, setIndex] = useState(INDEX_RATIO);
   const [isMobile, setIsMobile] = useState(false);
+
 
   const smooth = 0.4;
 
@@ -81,13 +82,13 @@ export const useInventoryCoverageOption = (
         top: 0,
         textStyle: {
           color: black,
-          fontSize: dyn(18), 
+          fontSize: dyn(18),
           fontWeight: 600,
           fontFamily: fixelDisplay || baseFont,
         },
         subtextStyle: {
           color: `${black}80`,
-          fontSize: dyn(14), 
+          fontSize: dyn(14),
         },
         itemGap: dyn(8),
       },
@@ -95,7 +96,8 @@ export const useInventoryCoverageOption = (
         show: !isMobile,
         top: 0,
         right: 0,
-      
+        itemWidth: 18,
+        itemHeight: 3,
         icon: 'roundRect',
         data: [
           {
@@ -123,22 +125,13 @@ export const useInventoryCoverageOption = (
         },
       },
 
-      grid: {
-        left: dyn(9),
-        right: dyn(4),
-        top: dyn(72),
-        bottom: dyn(4),
-      },
-
+      grid: { left: dyn(9), right: dyn(4), top: dyn(72), bottom: dyn(4) },
       tooltip: {
         trigger: 'axis',
         className: 'inventory-tooltip',
         borderWidth: 0,
-        extraCssText: `
-          box-shadow: 1px 0px 4px 0px #00000014;
-          border-radius:${dyn(8)}px;
-          padding:${dyn(12)}px ${dyn(12)}px;
-        `,
+        extraCssText:
+          `box-shadow: 1px 0px 4px 0px #00000014;border-radius:8px;padding:${dyn(12)}px ${dyn(12)}px;`,
         axisPointer: {
           type: 'line',
           lineStyle: {
@@ -182,12 +175,8 @@ export const useInventoryCoverageOption = (
         interval: 25,
         axisLine: { show: false },
         splitLine: { lineStyle: { color: `${black}1A` } },
-        axisLabel: {
-          color: `${black}80`,
-          fontSize: dyn(12),
-        },
+        axisLabel: { color: `${black}80`, fontSize: dyn(12) },
       },
-
       series: [
         {
           name: 'Projected Inventory',
@@ -203,9 +192,11 @@ export const useInventoryCoverageOption = (
           name: 'DemandShadow',
           type: 'line',
           data: data.map((p) => [p.label, p.demand - 3]),
-          smooth,
+          smooth: smooth,
           lineStyle: { width: 0 },
+
           showSymbol: false,
+
           silent: true,
           tooltip: { show: false },
           animation: false,
@@ -216,8 +207,10 @@ export const useInventoryCoverageOption = (
               y: 0,
               x2: 0,
               y2: 1,
+
               colorStops: [
                 { offset: 0, color: `${primary}1A` },
+
                 { offset: 1, color: `${primary}00` },
               ],
             },
@@ -230,8 +223,10 @@ export const useInventoryCoverageOption = (
           data: data.map((p) => [p.label, p.demand]),
           smooth,
           lineStyle: { width: 2, color: primary },
+
           showSymbol: true,
           symbolSize: 0.01,
+
           itemStyle: { color: primary },
           emphasis: {
             scale: 800,
@@ -241,6 +236,7 @@ export const useInventoryCoverageOption = (
             },
           },
         },
+
         {
           name: 'Safety Stock Level',
           type: 'line',

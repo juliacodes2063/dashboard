@@ -131,6 +131,7 @@ body {
   .card-info-gen {
     @include dyn-size(padding, 14);
     @include dyn-size(padding-top, 20);
+    @include dyn-size(border-radius, 24);
   }
 
   .card-info-gen-gap {
@@ -139,6 +140,13 @@ body {
 
   .cart-info-title-m {
     @include dyn-size(margin-bottom, 10);
+  }
+
+  .cart-chart {
+    @include dyn-size(padding-top, 16);
+    @include dyn-size(padding-bottom, 16);
+    @include dyn-size(padding-left, 14);
+    @include dyn-size(padding-right, 14);
   }
 
   @media (min-width: 1280px) {
