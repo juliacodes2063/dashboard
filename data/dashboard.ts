@@ -29,19 +29,22 @@ export const statCardsMock: StatCard[] = [
 ];
 
 export const inventoryMock: InventoryPoint[] = [
-  { id: 'jan', label: 'Jan', inventory: 48, demand: 47, safetyStock: 32 },
-  { id: 'feb', label: 'Feb', inventory: 66, demand: 57, safetyStock: 32 },
-  { id: 'mar', label: 'Mar', inventory: 75, demand: 60, safetyStock: 32 },
-  { id: 'apr', label: 'Apr', inventory: 66, demand: 53, safetyStock: 32 },
-  { id: 'may', label: 'May', inventory: 48, demand: 43, safetyStock: 32 },
-  { id: 'jun', label: 'Jun', inventory: 39, demand: 40, safetyStock: 32 },
-  { id: 'jul', label: 'Jul', inventory: 48, demand: 47, safetyStock: 32 },
-  { id: 'aug', label: 'Aug', inventory: 66, demand: 57, safetyStock: 32 },
-  { id: 'sep', label: 'Sep', inventory: 75, demand: 60, safetyStock: 32 },
-  { id: 'oct', label: 'Oct', inventory: 66, demand: 53, safetyStock: 32 },
-  { id: 'nov', label: 'Nov', inventory: 48, demand: 43, safetyStock: 32 },
-  { id: 'dec', label: 'Dec', inventory: 39, demand: 40, safetyStock: 32 },
+  { id: 'decPrev', label: '2024-12-15', inventory: 64, demand: 70, safetyStock: 32 },
+  { id: 'jan', label: '2025-01-01', inventory: 62, demand: 62, safetyStock: 32 },
+  { id: 'feb', label: '2025-02-01', inventory: 50, demand: 45, safetyStock: 32 },
+  { id: 'mar', label: '2025-03-01', inventory: 67, demand: 60, safetyStock: 32 },
+  { id: 'apr', label: '2025-04-01', inventory: 39, demand: 45, safetyStock: 32 },
+  { id: 'may', label: '2025-05-01', inventory: 64, demand: 73, safetyStock: 32 },
+  { id: 'jun', label: '2025-06-01', inventory: 35, demand: 50, safetyStock: 32 },
+  { id: 'jul', label: '2025-07-01', inventory: 57, demand: 73, safetyStock: 32 },
+  { id: 'aug', label: '2025-08-01', inventory: 45, demand: 50, safetyStock: 32 },
+  { id: 'sep', label: '2025-09-01', inventory: 89, demand: 80, safetyStock: 32 },
+  { id: 'oct', label: '2025-10-01', inventory: 47, demand: 56, safetyStock: 32 },
+  { id: 'nov', label: '2025-11-01', inventory: 65, demand: 74, safetyStock: 32 },
+  { id: 'dec', label: '2025-12-01', inventory: 39, demand: 60, safetyStock: 32 },
+  { id: 'decMidl', label: '2025-12-15', inventory: 60, demand: 75, safetyStock: 32 },
 ];
+
 
 export const infoBlocksMock: InfoBlock[] = [
   {

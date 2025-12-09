@@ -3,7 +3,7 @@
 import React from 'react';
 import { cn } from '@/lib/cn';
 
-type IconButtonSize = 'md' | 'lg';
+type IconButtonSize = 'md' | 'mdm' | 'lg';
 type IconButtonThemeName = 'headerLight' | 'sidebarLink' | 'avatar' |'logo';
 
 type IconButtonTheme = {
@@ -12,6 +12,7 @@ type IconButtonTheme = {
 
 const sizeClasses: Record<IconButtonSize, string> = {
   md: 'h-[46px] w-[46px]',
+  mdm: 'h-[46px] w-[48px]',
   lg: 'h-[50px] w-[50px]',
 };
 

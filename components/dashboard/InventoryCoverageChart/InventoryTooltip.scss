@@ -1,0 +1,82 @@
+@import '../../../app/styles/mixins/dynamic';
+
+.inventory-tooltip {
+  font-family: var(--font-open-sans, system-ui, -apple-system, sans-serif);
+  color: var(--foreground, #071429);
+}
+
+.inventory-tooltip__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include dyn-size(font-size, 14);
+}
+
+.inventory-tooltip__title {
+  opacity: 0.5;
+  line-height: 120%;
+}
+
+.inventory-tooltip__dataBox {
+  display: flex;
+  align-items: baseline;
+  @include dyn-size(gap, 16);
+}
+
+.inventory-tooltip__col {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.inventory-tooltip__col > div {
+  display: flex;
+  align-items: baseline;
+  @include dyn-size(gap, 5);
+}
+
+.inventory-tooltip__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 50%;
+}
+
+.inventory-tooltip__dot--inventory {
+  background: var(--foreground);
+}
+
+.inventory-tooltip__dot--demand {
+  background: var(--color-primaryBlue);
+}
+
+.inventory-tooltip__value {
+  @include dyn-size(font-size, 15);
+  line-height: 120%;
+  color: var(--foreground, #071429);
+  font-family: var(--font-fixel-display, system-ui, -apple-system, sans-serif);
+}
+
+.inventory-tooltip__value strong {
+  font-weight: 600;
+}
+
+.inventory-tooltip__label {
+  opacity: 0.5;
+  line-height: 120%;
+  font-weight: 400;
+}
+
+.inventory-tooltip__divider {
+  height: 1px;
+  background: var(--foreground);
+  opacity: 0.1;
+}
+
+.inventory-tooltip__footer {
+  opacity: 0.5;
+  line-height: 120%;
+  font-weight: 400;
+}

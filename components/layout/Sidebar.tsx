@@ -8,7 +8,7 @@ import { sidebarNavItems } from './sidebarNavItems';
 const Sidebar = () => {
   return (
     <div  className="hidden md:flex w-[74px] flex-col justify-between items-center p-3">
-      <div className="flex flex-col items-center gap-30">
+      <div className="flex flex-col items-center dynamic-dis-sidebar">
         <IconButton aria-label="Notifications" size="lg" theme="logo">
           <PackageIcon  />
         </IconButton>

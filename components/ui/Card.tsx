@@ -4,15 +4,13 @@ import React from 'react';
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-  noPadding?: boolean;
 }
 
-const Card: React.FC<CardProps> = ({ children, className, noPadding }) => {
+const Card: React.FC<CardProps> = ({ children, className }) => {
   return (
     <div
       className={cn(
-        'rounded-3xl flex-1 bg-items',
-        !noPadding && 'p-[18px]',
+        'bg-items',
         className,
       )}
     >

@@ -5,7 +5,7 @@ export const openSans = Open_Sans({
   subsets: ['latin'],
   variable: '--font-open-sans',
   
-  weight: ['500', '600'],
+  weight: ['400', '500', '600'],
 });
 
 export const fixelDisplay = localFont({

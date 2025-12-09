@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { openSans, fixelDisplay } from './fonts';
-import './globals.css';
+import './styles/globals.scss';
 import Sidebar from '@/components/layout/Sidebar';
 import Header from '@/components/layout/Header';
-import { BackgroundBlobs } from '@/components/BackgroundBlobs';
 
 export const metadata: Metadata = {
   title: 'Location-Based Forecasting',
@@ -36,7 +35,6 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${fixelDisplay.variable} antialiased`}
       >
-        <BackgroundBlobs />
         <div className="min-h-screen flex">
           <Sidebar />
 

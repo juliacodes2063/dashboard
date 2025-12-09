@@ -1,7 +1,7 @@
 export function BackgroundBlobs() {
   return (
     <div
-      className="fixed inset-0 -z-10 pointer-events-none"
+      className="w-full h-full inset-0  pointer-events-none"
       aria-hidden="true"
     >
       <svg
@@ -10,7 +10,7 @@ export function BackgroundBlobs() {
         viewBox="0 0 440 397"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute bottom-0 right-0"
+        className="absolute bottom-0"
       >
         <circle cx="199" cy="264" r="264" fill="url(#paint0_radial_6_1039)" />
         <defs>

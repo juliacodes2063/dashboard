@@ -4,8 +4,8 @@ import { EyeIcon } from '@/components/icons';
 
 const ForecastHeader: React.FC = () => {
   return (
-    <div className="flex flex-col items-center gap-5 mb-4 lg:gap-0 lg:flex-row lg:justify-between  lg:mb-8">
-      <div className="flex flex-col gap-[8px]">
+    <div className="flex flex-col items-center gap-5 lg:gap-0 lg:flex-row lg:justify-between dynamic-dis-title-m">
+      <div className="flex flex-col dynamic-dis-grid">
         <h1 className="heading-hero">Location-Based Forecasting</h1>
         <p className="text-body-md">
           Robust Rate of Sale forecasting with location-aware calculations.
