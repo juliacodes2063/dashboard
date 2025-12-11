@@ -23,6 +23,7 @@
   --dyn-20: calc(var(--index) * 20 / var(--index-ratio));
   --dyn-24: calc(var(--index) * 24 / var(--index-ratio));
   --dyn-34: calc(var(--index) * 34 / var(--index-ratio));
+  --dyn-36: calc(var(--index) * 36 / var(--index-ratio));
   --dyn-40: calc(var(--index) * 40 / var(--index-ratio));
   --dyn-129: calc(var(--index) * 129 / var(--index-ratio));
   --dyn-176: calc(var(--index) * 176 / var(--index-ratio));
